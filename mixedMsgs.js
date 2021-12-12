@@ -15,10 +15,10 @@ const msg1 = () => {
     let msgNum = randNum(2);
     //compares random numbers to messages and display's it 
     switch(msgNum) { 
-        case '0':
+        case 0:
             return 'Knock Knock';
             break;
-        case '1':
+        case 1:
             return 'Not in the mood for a joke. Try again later!';
             break;
         default:
@@ -32,16 +32,16 @@ const msg2 =  () => {
     let msgNum = randNum(4);
     //compares random numbers to messages and display's it
     switch(msgNum) { 
-        case '0': 
+        case 0: 
             return 'Orange'; 
             break;
-        case '1': 
+        case 1: 
             return 'Who';
             break;
-        case '2': 
+        case 2: 
             return 'banana';
             break;
-        case '3': 
+        case 3: 
             return 'brick';
             break;
         default: 
@@ -50,8 +50,23 @@ const msg2 =  () => {
     }
 };
 
-const tempMsg1 = msg1(); 
-const tempMsg2 = msg2(); 
+
+const tempMsg1 = msg1(); //gets the beginning of the joke.  
+
+if (tempMsg1 === "Not in the mood for a joke. Try again later!") {
+    console.log(tempMsg1);
+    process.exit();
+};
+const tempMsg2 = msg2(); // gets the second message of the joke 
 
 
+
+console.log(tempMsg1 + '\n' + 'Whose there?' + '\n' + tempMsg2 + '\n' + tempMsg2 + ' who?') //prints out the beginning of the jokes 
+
+if (tempMsg2 === 'banana') { //sets up the banana joke 
+    for (let i = 0; i < 5; i++) {
+        console.log(tempMsg2 + '\n' + tempMsg2 + ' who?');
+    };
+    console.log('Orange you glad I didn\'t say ' + tempMsg2 + ' again!?!?')
+};
 
