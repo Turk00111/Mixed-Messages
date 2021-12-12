@@ -9,9 +9,11 @@ const randNum = (maxNum) => {
     
 };
 
-
+//generates the first part of the message 
 const msg1 = () => { 
+    //gets a random number
     let msgNum = randNum(2);
+    //compares random numbers to messages and display's it 
     switch(msgNum) { 
         case '0':
             return 'Knock Knock';
@@ -24,9 +26,11 @@ const msg1 = () => {
             break; 
     };
 };
-
+//get's the second message
 const msg2 =  () => {
+    //gets a random number
     let msgNum = randNum(4);
+    //compares random numbers to messages and display's it
     switch(msgNum) { 
         case '0': 
             return 'Orange'; 
