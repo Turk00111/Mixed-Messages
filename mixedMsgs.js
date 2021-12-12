@@ -63,10 +63,18 @@ const tempMsg2 = msg2(); // gets the second message of the joke
 
 console.log(tempMsg1 + '\n' + 'Whose there?' + '\n' + tempMsg2 + '\n' + tempMsg2 + ' who?') //prints out the beginning of the jokes 
 
-if (tempMsg2 === 'banana') { //sets up the banana joke 
+if (tempMsg2 === 'banana') { //sets up all the jokes
     for (let i = 0; i < 5; i++) {
         console.log(tempMsg2 + '\n' + tempMsg2 + ' who?');
     };
     console.log('Orange you glad I didn\'t say ' + tempMsg2 + ' again!?!?')
-};
+} else if ( tempMsg2 === 'Orange') {
+    console.log('Who ever heard of a talking ' + tempMsg2 + '!');
+ } else if (tempMsg2 === 'Who') { 
+     console.log('I didn\'t know there was an Owl in here!');
+ } else if (tempMsg2 === 'brick') { 
+     console.log('It\'s a ' + tempMsg2 + ' house!'); 
+ } else { 
+     console.log('There was an error with generating the joke. Try again later')
+ }
 
